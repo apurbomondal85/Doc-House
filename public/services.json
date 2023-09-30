@@ -1,0 +1,164 @@
+[
+    {
+        "category_name": "Preventive Care",
+        "category_image_url": "preventive_care_image.jpg",
+        "category_benefits": [
+            "Maintains oral health",
+            "Early detection of dental issues"
+        ],
+        "categories": [
+            {
+                "id": 1,
+                "name": "Dental Checkup",
+                "description": "A routine dental checkup to assess your oral health.",
+                "image_url": "dental_checkup_image.jpg",
+                "price": 80,
+                "benefits": [
+                    "Oral health assessment",
+                    "Cavity detection",
+                    "Plaque and tartar removal"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Dental Cleaning",
+                "description": "Professional cleaning to remove plaque and tartar buildup.",
+                "image_url": "dental_cleaning_image.jpg",
+                "price": 120,
+                "benefits": [
+                    "Plaque and tartar removal",
+                    "Gum health improvement",
+                    "Fresh breath"
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Fluoride Treatment",
+                "description": "Application of fluoride to strengthen tooth enamel.",
+                "image_url": "fluoride_treatment_image.jpg",
+                "price": 50,
+                "benefits": [
+                    "Tooth enamel strengthening",
+                    "Cavity prevention",
+                    "Sensitivity reduction"
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Dental Sealants",
+                "description": "Protective coatings applied to molars to prevent cavities.",
+                "image_url": "dental_sealants_image.jpg",
+                "price": 150,
+                "benefits": [
+                    "Cavity prevention in molars",
+                    "Long-lasting protection",
+                    "Easy to maintain"
+                ]
+            }
+        ]
+    },
+    {
+        "category_name": "Orthodontic Services",
+        "category_image_url": "orthodontic_services_image.jpg",
+        "category_benefits": [
+            "Corrects misaligned teeth",
+            "Improves bite and jaw alignment"
+        ],
+        "categories": [
+            {
+                "id": 1,
+                "name": "Braces",
+                "description": "Orthodontic treatment with traditional braces to correct misaligned teeth.",
+                "image_url": "braces_image.jpg",
+                "price": 4000,
+                "benefits": [
+                    "Effective for various alignment issues",
+                    "Customizable appearance options",
+                    "Gradual teeth straightening"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Invisalign",
+                "description": "Clear aligner treatment to gradually straighten teeth without metal braces.",
+                "image_url": "invisalign_image.jpg",
+                "price": 5000,
+                "benefits": [
+                    "Nearly invisible treatment",
+                    "Removable aligners for eating and cleaning",
+                    "Reduced discomfort compared to braces"
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Retainers",
+                "description": "Custom retainers to maintain the alignment of teeth after orthodontic treatment.",
+                "image_url": "retainers_image.jpg",
+                "price": 300,
+                "benefits": [
+                    "Preserves orthodontic results",
+                    "Prevents teeth from shifting",
+                    "Comfortable and easy to wear"
+                ]
+            }
+        ]
+    },
+    {
+        "category_name": "Cosmetic Dentistry",
+        "category_image_url": "cosmetic_dentistry_image.jpg",
+        "category_benefits": [
+            "Enhances the appearance of your smile",
+            "Boosts confidence through improved aesthetics"
+        ],
+        "categories": [
+            {
+                "id": 1,
+                "name": "Teeth Whitening",
+                "description": "Professional teeth whitening to brighten your smile.",
+                "image_url": "teeth_whitening_image.jpg",
+                "price": 200,
+                "benefits": [
+                    "Removes stains and discoloration",
+                    "Achieve a whiter, more vibrant smile",
+                    "Safe and effective treatment"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Dental Veneers",
+                "description": "Thin shells of porcelain placed on the front of teeth to improve appearance.",
+                "image_url": "dental_veneers_image.jpg",
+                "price": 800,
+                "benefits": [
+                    "Covers imperfections like chips and stains",
+                    "Creates a natural-looking smile",
+                    "Durable and long-lasting"
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Cosmetic Bonding",
+                "description": "Composite resin applied to improve the shape or color of teeth.",
+                "image_url": "cosmetic_bonding_image.jpg",
+                "price": 250,
+                "benefits": [
+                    "Corrects minor imperfections",
+                    "Quick and minimally invasive procedure",
+                    "Enhances tooth appearance"
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Smile Makeover",
+                "description": "Comprehensive treatment plan to transform your smile.",
+                "image_url": "smile_makeover_image.jpg",
+                "price": 1500,
+                "benefits": [
+                    "Customized treatment for multiple issues",
+                    "Achieve the smile you've always wanted",
+                    "Boosts self-confidence"
+                ]
+            }
+        ]
+    }    
+]
