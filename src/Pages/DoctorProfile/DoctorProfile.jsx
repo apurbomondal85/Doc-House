@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import CoverPage from '../CoverPage/CoverPage';
 import DoctorCart from '../DoctorDetails/DoctorCart/DoctorCart';
+import DoctorData from '../DoctorDetails/DoctorData/DoctorData';
 
 function DoctorProfile() {
     const { id } = useParams()
@@ -19,6 +20,7 @@ function DoctorProfile() {
             <CoverPage title="Doctor Profile" subTitle="Doctor Profile" ></CoverPage>
             <div className="container py-16">
                 <DoctorCart doctor={doctor}></DoctorCart>
+                <DoctorData doctor={doctor}></DoctorData>
             </div>
         </div>
     )
