@@ -1,0 +1,20 @@
+.react-tabs__tab-list {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    border: .1rem solid #eee;
+    border-radius: 10px;
+}
+
+.react-tabs__tab {
+    border: none;
+    border-radius: 10px;
+    padding: .7rem .5rem;
+    flex-basis: 33.3%;
+}
+.react-tabs__tab--selected{
+    background: #F7A582;
+}

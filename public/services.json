@@ -11,7 +11,7 @@
                 "id": 1,
                 "name": "Dental Checkup",
                 "description": "A routine dental checkup to assess your oral health.",
-                "image_url": "dental_checkup_image.jpg",
+                "image_url": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fchambleedental.com%2Fwp-content%2Fuploads%2Fdental-check-up.jpg&tbnid=a8v9yTK4pmsD0M&vet=12ahUKEwi7uKbB2dOBAxXcTmwGHQSrDXoQMygNegUIARCIAQ..i&imgrefurl=https%3A%2F%2Fchambleedental.com%2Fblog%2F7-rules-to-make-your-dental-check-up-easier%2F&docid=Myzs7gBjnXVD1M&w=600&h=464&q=Dental%20Checkup%20image&ved=2ahUKEwi7uKbB2dOBAxXcTmwGHQSrDXoQMygNegUIARCIAQ",
                 "price": 80,
                 "benefits": [
                     "Oral health assessment",
@@ -160,5 +160,97 @@
                 ]
             }
         ]
-    }    
+    },
+    {
+        "category_name": "Oral Surgery",
+        "category_image_url": "oral_surgery_image.jpg",
+        "category_benefits": [
+            "Addresses various dental and oral health issues",
+            "Can provide relief from pain and discomfort"
+        ],
+        "categories": [
+            {
+                "id": 1,
+                "name": "Tooth Extraction",
+                "description": "Surgical removal of a tooth, often due to damage or decay.",
+                "image_url": "tooth_extraction_image.jpg",
+                "price": 150,
+                "benefits": [
+                    "Relief from tooth pain or infection",
+                    "Prevention of further dental issues",
+                    "Improvement in oral health"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Wisdom Tooth Removal",
+                "description": "Extraction of wisdom teeth to prevent pain and dental problems.",
+                "image_url": "wisdom_tooth_removal_image.jpg",
+                "price": 250,
+                "benefits": [
+                    "Prevention of wisdom tooth pain and impaction",
+                    "Reduced risk of complications",
+                    "Enhanced oral health"
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Dental Implant Surgery",
+                "description": "Placement of dental implants to replace missing teeth.",
+                "image_url": "dental_implant_surgery_image.jpg",
+                "price": 1800,
+                "benefits": [
+                    "Restores functionality and appearance",
+                    "Durable and long-lasting solution",
+                    "Preserves bone density"
+                ]
+            }
+        ]
+    },
+    {
+        "category_name": "Prosthodontics",
+        "category_image_url": "prosthodontics_image.jpg",
+        "category_benefits": [
+            "Restores and replaces missing teeth",
+            "Enhances oral function and appearance"
+        ],
+        "categories": [
+            {
+                "id": 1,
+                "name": "Dentures",
+                "description": "Custom-made removable or implant-supported dentures to replace missing teeth.",
+                "image_url": "dentures_image.jpg",
+                "price": 800,
+                "benefits": [
+                    "Restores chewing and speaking ability",
+                    "Improved facial appearance",
+                    "Customizable options"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Partial Dentures",
+                "description": "Removable partial dentures to replace a few missing teeth.",
+                "image_url": "partial_dentures_image.jpg",
+                "price": 600,
+                "benefits": [
+                    "Replaces missing teeth",
+                    "Enhances oral function",
+                    "Affordable tooth replacement option"
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Dental Implants for Denture Support",
+                "description": "Implants to stabilize and support dentures for improved stability and comfort.",
+                "image_url": "dental_implants_for_denture_support_image.jpg",
+                "price": 1500,
+                "benefits": [
+                    "Secure and stable denture fit",
+                    "Improved chewing and speaking",
+                    "Preserves jawbone health"
+                ]
+            }
+        ]
+    }
 ]
