@@ -10,7 +10,7 @@ function Login() {
     const [error, setError] = useState();
     const location = useLocation();
     const navigate = useNavigate();
-    const from = location?.state?.from?.pathname;
+    const from = location?.state?.from?.pathname || '/';
 
     const {
         register,
@@ -38,7 +38,7 @@ function Login() {
 
     return (
         <div className='container'>
-            <div className="flex flex-col md:flex-row md:items-center gap-8 md:h-screen bg-slate-200">
+            <div className="flex flex-col md:flex-row md:items-center gap-8 bg-slate-200">
                 <div className="bg-[#07332F] p-24 flex-1 h-full">
                     <img src={loginImg} alt="login image" className='h-[500px]' />
                 </div>

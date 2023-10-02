@@ -7,7 +7,11 @@ export default {
     "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'chair': "url('./src/assets/images/chair.png')",
+      }
+    },
   },
   plugins: [
     require('flowbite/plugin')

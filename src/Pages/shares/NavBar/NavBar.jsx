@@ -36,6 +36,9 @@ function NavBar() {
                 <NavLink to="/appointment" className="text-white">Appointment</NavLink>
               </li>
               <li>
+                <NavLink to="/my-appointment" className="text-white">My Appointment</NavLink>
+              </li>
+              <li>
                 {
                   user ? <NavLink onClick={handleLogOut} className="text-white">LogOut</NavLink> : <NavLink to="/login" className="text-white">Login</NavLink>
                 }
