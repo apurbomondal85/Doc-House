@@ -2,8 +2,9 @@
 import React, { useState } from 'react'
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import Overview from '../Overview/Overview';
+import Locations from '../Location/Locations';
 
-function DoctorData({doctor}) {
+function DoctorData({ doctor }) {
     const list = ["Overview", "Locations", "Reviews", "Business Hours"];
     const [activeTabIndex, setActiveTabIndex] = useState(0);
 
@@ -21,9 +22,16 @@ function DoctorData({doctor}) {
                 </TabList>
 
                 <div className='mt-8'>
-                    {
-                        activeTabIndex == 0 && <Overview doctor={doctor}></Overview>
-                    }
+                    <TabPanel>
+                        {
+                            activeTabIndex == 0 && <Overview doctor={doctor}></Overview>
+                        }
+                    </TabPanel>
+                    <TabPanel>
+                        {
+                            activeTabIndex == 1 && <Locations doctor={doctor}></Locations>
+                        }
+                    </TabPanel>
                 </div>
             </Tabs>
         </div>
