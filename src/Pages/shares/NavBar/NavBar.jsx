@@ -19,16 +19,16 @@ function NavBar() {
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0">
               <li>
-                <NavLink className="text-white">Home</NavLink>
+                <NavLink to="/" className="text-white">Home</NavLink>
               </li>
               <li>
-                <NavLink className="text-white">About</NavLink>
+                <NavLink to="/about" className="text-white">About</NavLink>
               </li>
               <li>
-                <NavLink className="text-white">Appointment</NavLink>
+                <NavLink to="/appointment" className="text-white">Appointment</NavLink>
               </li>
               <li>
-                <NavLink className="text-white">Login</NavLink>
+                <NavLink to="/login" className="text-white">Login</NavLink>
               </li>
             </ul>
           </div>

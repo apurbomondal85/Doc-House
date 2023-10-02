@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import Overview from '../Overview/Overview';
 import Locations from '../Location/Locations';
+import ReviewTab from '../ReviewTab/ReviewTab';
 
 function DoctorData({ doctor }) {
     const list = ["Overview", "Locations", "Reviews", "Business Hours"];
@@ -30,6 +31,11 @@ function DoctorData({ doctor }) {
                     <TabPanel>
                         {
                             activeTabIndex == 1 && <Locations doctor={doctor}></Locations>
+                        }
+                    </TabPanel>
+                    <TabPanel>
+                        {
+                            activeTabIndex == 2 && <ReviewTab doctor={doctor}></ReviewTab>
                         }
                     </TabPanel>
                 </div>
