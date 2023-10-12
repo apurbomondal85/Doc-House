@@ -4,9 +4,10 @@ import loginImg from '../../assets/images/login.png'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
+import { FaGoogle } from 'react-icons/fa6';
 
 function singUp() {
-    const { createUser, updateUser } = useContext(AuthContext);
+    const { createUser, updateUser, google } = useContext(AuthContext);
     const [error, setError] = useState();
     const location = useLocation();
     const navigate = useNavigate();
@@ -36,6 +37,16 @@ function singUp() {
             });
 
     }
+    const handleGoogle = () => {
+        google()
+            .then((result) => {
+                const user = result.user;
+                navigate(from)
+            }).catch((error) => {
+                const errorCode = error.code;
+                setError(errorCode)
+            });
+    }
 
     return (
         <div className='container'>
@@ -62,6 +73,7 @@ function singUp() {
                             </div>
                             <p className="text-red-500 my-3 text-sm">{error && error}</p>
                             <button type="submit" className="text-white mb-3 bg-[#D1A054] font-medium rounded-lg text-base w-full px-5 py-2.5 text-center">Create Account</button>
+                            <span onClick={handleGoogle} className="text-white mb-3 bg-[#D1A054] font-medium rounded-lg text-base w-full px-5 py-2.5 text-center flex items-center justify-center gap-2 cursor-pointer"><FaGoogle className='text-blue-800 text-xl'></FaGoogle>Login With Google</span>
                             <p className='my-4 text-center'>Already registered? Go to <Link to="/login" className='underline text-blue-500'>login</Link></p>
                             <Link to="/"><button className='bg-[#D1A054] p-1 rounded-md text-white'>Back Home</button></Link>
                         </form>
