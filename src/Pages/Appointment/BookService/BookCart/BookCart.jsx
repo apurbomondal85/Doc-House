@@ -4,9 +4,11 @@ import { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../../../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 function BookCart({ service, date }) {
     const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
     const [openModal, setOpenModal] = useState();
     const props = { openModal, setOpenModal };
     const {
@@ -22,22 +24,26 @@ function BookCart({ service, date }) {
         const name = data.name;
         const phone = data.phone;
         const email = data.email;
-        fetch(`http://localhost:5000/appointmentBook/${user?.email}`, {
-            method: "POST",
-            headers: { 'content-type': 'application/json' },
-            body: JSON.stringify({ date: dates, time, name, phone, selectedEmail: email, userEmail: user?.email })
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.acknowledged) {
-                    Swal.fire(
-                        'Good job!',
-                        'You clicked the button!',
-                        'success'
-                    )
-                    props.setOpenModal(undefined)
-                }
+        if (user) {
+            fetch(`http://localhost:5000/appointmentBook/${user?.email}`, {
+                method: "POST",
+                headers: { 'content-type': 'application/json' },
+                body: JSON.stringify({treatment:service?.category_name,  date: dates, time, name, phone, selectedEmail: email, userEmail: user?.email })
             })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.acknowledged) {
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'success'
+                        )
+                        props.setOpenModal(undefined)
+                    }
+                })
+        }else{
+            navigate('/login')
+        }
     }
 
     return (
@@ -52,8 +58,8 @@ function BookCart({ service, date }) {
                 <Modal.Body>
                     <h1 className="text-2xl text-[#3B3A3A] font-semibold mb-4">{service?.category_name}</h1>
                     <form onSubmit={handleSubmit(onSubmit)} className='w-full'>
-                        <input {...register("date", { required: true })} type="text" className='w-full p-2 bg-blue-100 rounded-md border-0 focus:ring-0' value={date.toDateString()} />
-                        <input {...register("time", { required: true })} type="text" className='w-full p-2 bg-blue-100 rounded-md border-0 focus:ring-0 my-2' value="8:00 AM - 9:00 AM" />
+                        <input {...register("date", { required: true })} type="text" className='w-full p-2 bg-blue-100 rounded-md border-0 focus:ring-0' defaultValue={date.toDateString()} />
+                        <input {...register("time", { required: true })} type="text" className='w-full p-2 bg-blue-100 rounded-md border-0 focus:ring-0 my-2' defaultValue="8:00 AM - 9:00 AM" />
                         <input {...register("name", { required: true })} type="text" className='w-full p-2 bg-blue-100 rounded-md border-0 focus:ring-0 my-2' placeholder='Full Name' />
                         <input {...register("phone", { required: true })} type="text" className='w-full p-2 bg-blue-100 rounded-md border-0 focus:ring-0 my-2' placeholder='Phone Number' />
                         <input {...register("email", { required: true })} type="email" className='w-full p-2 bg-blue-100 rounded-md border-0 focus:ring-0 my-2' placeholder='Email' />
