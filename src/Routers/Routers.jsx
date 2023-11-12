@@ -10,6 +10,7 @@ import Appointment from "../Pages/Appointment/Appointment";
 import Dashboard from "../Layout/Dashboard";
 import MyAppointment from "../Pages/Dashboard/UserDashboard/MyAppointment/MyAppointment";
 import MyReviews from "../Pages/Dashboard/UserDashboard/MyReviews/MyReviews";
+import PaymentHistory from "../Pages/Dashboard/UserDashboard/PaymentHistory/PaymentHistory";
 
 
 const router = createBrowserRouter([
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
             {
                 path: "/dashboard/my-reviews",
                 element: <MyReviews />,
+            },
+            {
+                path: "/dashboard/my-history",
+                element: <PaymentHistory />
             }
         ]
     }

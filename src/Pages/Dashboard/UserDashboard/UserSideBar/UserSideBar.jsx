@@ -22,6 +22,9 @@ export default function UserSideBar() {
                         <li>
                             <NavLink to="/dashboard/my-reviews">My Reviews</NavLink>
                         </li>
+                        <li>
+                            <NavLink to="/dashboard/my-history">My History</NavLink>
+                        </li>
                     </ul>
                 </div>
             </aside>
