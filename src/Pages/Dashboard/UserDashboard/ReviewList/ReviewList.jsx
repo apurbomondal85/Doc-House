@@ -19,7 +19,7 @@ function ReviewList({ service }) {
             if (result.isConfirmed) {
                 axios({
                     method: 'DELETE',
-                    url: `http://localhost:5000/deleteAppointment/${id}`
+                    url: `https://doc-house-server-nc9o54us0-apurbomondal85.vercel.app/deleteAppointment/${id}`
                 })
                     .then(data => {
                         if (data.data.acknowledged) {
@@ -37,9 +37,9 @@ function ReviewList({ service }) {
     }
 
     return (
-        <div className="relative overflow-x-auto shadow-md sm:rounded-lg ml-12">
+        <div className="relative overflow-x-auto shadow-md sm:rounded-lg lg:ml-12">
             <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <thead className="text-xs text-gray-700 uppercase bg-gray-50">
                     <tr>
                         <th scope="col" className="px-4 py-3">
                             Name
@@ -58,10 +58,10 @@ function ReviewList({ service }) {
                 <tbody>
                     {
                         selectService.map(item =>
-                            <tr key={item._id} className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-                                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            <tr key={item._id} className="bg-white border-b whitespace-nowrap">
+                                <td className="px-6 py-4">
                                     {item?.name}
-                                </th>
+                                </td>
                                 <td className="px-6 py-4">
                                     {item?.date}
                                 </td>

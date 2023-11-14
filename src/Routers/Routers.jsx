@@ -11,6 +11,8 @@ import Dashboard from "../Layout/Dashboard";
 import MyAppointment from "../Pages/Dashboard/UserDashboard/MyAppointment/MyAppointment";
 import MyReviews from "../Pages/Dashboard/UserDashboard/MyReviews/MyReviews";
 import PaymentHistory from "../Pages/Dashboard/UserDashboard/PaymentHistory/PaymentHistory";
+import DetailsDashboard from "../Pages/Dashboard/AdminDashboard/Dashboard/Dashboard";
+import AllUsers from "../Pages/Dashboard/AdminDashboard/AllUser/AllUser";
 
 
 const router = createBrowserRouter([
@@ -58,6 +60,14 @@ const router = createBrowserRouter([
             {
                 path: "/dashboard/my-history",
                 element: <PaymentHistory />
+            },
+            {
+                path: "/dashboard/details-dashboard",
+                element: <DetailsDashboard/>
+            },
+            {
+                path: "/dashboard/all-users",
+                element: <AllUsers/>
             }
         ]
     }

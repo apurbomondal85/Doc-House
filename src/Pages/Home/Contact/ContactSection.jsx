@@ -25,7 +25,7 @@ function ContactSection() {
 
     return (
         <div className='container py-16'>
-            <div className='p-24 rounded-sm bg-[#07332F] md:flex justify-center items-center gap-6'>
+            <div className='p-8 lg:p-24 rounded-sm bg-[#07332F] flex flex-col md:flex-row justify-center items-center gap-6'>
                 <div className="text-white flex-1 space-y-6">
                     <h1 className="text-3xl font-semibold">Contact With Us</h1>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi.</p>
@@ -36,12 +36,12 @@ function ContactSection() {
                 </div>
                 <div className="flex-1">
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <div className="grid grid-cols-2 gap-6">
-                            <input style={{ background: "rgba(255, 255, 255, 0.05)" }} className="text-white placeholder:text-white p-4 rounded-md shadow border-0 outline-none" type="text" {...register("name")} placeholder="Name" required />
-                            <input style={{ background: "rgba(255, 255, 255, 0.05)" }} className="text-white placeholder:text-white p-4 rounded-md shadow border-0 outline-none" type="email" {...register("email")} placeholder="Email" required />
-                            <input style={{ background: "rgba(255, 255, 255, 0.05)" }} className="text-white placeholder:text-white p-4 rounded-md shadow border-0 outline-none" type="text" {...register("phone")} placeholder="Mobile Number" required />
-                            <input style={{ background: "rgba(255, 255, 255, 0.05)" }} className="text-white placeholder:text-white p-4 rounded-md shadow border-0 outline-none" type="text" {...register("doctor")} placeholder="Doctor Name" />
-                            <input style={{ background: "rgba(255, 255, 255, 0.05)" }} className="text-white shadow p-4 rounded-md border-0 outline-none" type="date" {...register("date")} required/>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <input style={{ background: "rgba(255, 255, 255, 0.05)" }} className="text-white w-full placeholder:text-white p-4 rounded-md shadow border-0 outline-none" type="text" {...register("name")} placeholder="Name" required />
+                            <input style={{ background: "rgba(255, 255, 255, 0.05)" }} className="text-white w-full placeholder:text-white p-4 rounded-md shadow border-0 outline-none" type="email" {...register("email")} placeholder="Email" required />
+                            <input style={{ background: "rgba(255, 255, 255, 0.05)" }} className="text-white w-full placeholder:text-white p-4 rounded-md shadow border-0 outline-none" type="text" {...register("phone")} placeholder="Mobile Number" required />
+                            <input style={{ background: "rgba(255, 255, 255, 0.05)" }} className="text-white w-full placeholder:text-white p-4 rounded-md shadow border-0 outline-none" type="text" {...register("doctor")} placeholder="Doctor Name" />
+                            <input style={{ background: "rgba(255, 255, 255, 0.05)" }} className="text-white w-full shadow p-4 rounded-md border-0 outline-none" type="date" {...register("date")} required/>
                             <select style={{ background: "rgba(255, 255, 255, 0.05)" }} className="text-white shadow border-0 outline-none" {...register("time")}>
                                 <option className="text-black" value="Time" selected disabled>Time</option>
                                 <option className="text-black" value="9:30 AM" >9:30 AM</option>
@@ -49,7 +49,7 @@ function ContactSection() {
                             </select>
                         </div>
                         <div>
-                            <button type="submit" className="text-[#F7A582] border border-[#F7A582] transition ease-in-out delay-150 hover:text-white hover:bg-[#F7A582] w-full font-medium rounded-lg py-3 mt-6 focus:outline-none">All Service</button>
+                            <button type="submit" className="text-[#F7A582] border border-[#F7A582] transition ease-in-out delay-150 hover:text-white hover:bg-[#F7A582] w-full font-medium rounded-lg py-3 mt-6 focus:outline-none">Submit</button>
                         </div>
                     </form>
                 </div>

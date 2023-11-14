@@ -1,0 +1,22 @@
+@media (max-width: 578px) {
+    .react-tabs__tab-list {
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: left;
+        border: none;
+        border-radius: 0;
+    }
+
+    .react-tabs__tab {
+        text-wrap: nowrap;
+        border: none;
+        padding: 0;
+        flex-basis: 30%;
+    }
+
+    .react-tabs__tab--selected {
+        background: transparent;
+    }
+}

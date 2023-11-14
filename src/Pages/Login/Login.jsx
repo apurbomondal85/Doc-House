@@ -5,6 +5,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { FaGoogle } from "react-icons/fa6";
+import usePostUser from '../../Hook/postUser/usePostUser';
+import { Helmet } from 'react-helmet';
 
 function Login() {
     const { login, google } = useContext(AuthContext);
@@ -41,6 +43,7 @@ function Login() {
         google()
         .then((result) => {
             const user = result.user;
+            usePostUser(user)
             navigate(from)
           }).catch((error) => {
             const errorCode = error.code;
@@ -50,11 +53,14 @@ function Login() {
 
     return (
         <div className='container'>
-            <div className="flex flex-col md:flex-row md:items-center gap-8 bg-slate-200">
-                <div className="bg-[#07332F] p-24 flex-1 h-full">
-                    <img src={loginImg} alt="login image" className='h-[500px]' />
+            <Helmet>
+                <title>Login</title>
+            </Helmet>
+            <div className="flex flex-col md:flex-row md:items-center gap-2 lg:gap-8 bg-slate-200">
+                <div className="bg-[#07332F] p-24 basis-[50%] h-full">
+                    <img src={loginImg} alt="login image" className='h-[300px] lg:h-[500px] w-full' />
                 </div>
-                <div className="flex-1 flex justify-center items-center bg-slate-200">
+                <div className=" basis-[50%] flex justify-center items-center bg-slate-200">
                     <div className="p-8 rounded-lg shadow border bg-white border-blue-300">
                         <h1 className='text-center text-3xl font-semibold mb-10'>Sign in to Doc House</h1>
                         <form onSubmit={handleSubmit(onSubmit)}>

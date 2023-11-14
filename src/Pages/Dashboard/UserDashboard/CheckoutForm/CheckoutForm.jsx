@@ -12,7 +12,7 @@ const CheckoutForm = ({ price, name, closeModal, getPaymentId }) => {
     const [clientSecret, setClientSecret] = useState("");
     useEffect(() => {
         if (price) {
-            fetch("http://localhost:5000/create-payment-intent", {
+            fetch("https://doc-house-server-nc9o54us0-apurbomondal85.vercel.app/create-payment-intent", {
                 method: "POST",
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ totalPrice: parseFloat(price.toFixed(2)) })
@@ -64,7 +64,7 @@ const CheckoutForm = ({ price, name, closeModal, getPaymentId }) => {
 
         if (paymentIntent?.status === "succeeded") {
             const paymentHistory = { paymentId: paymentIntent.id, name, status : "Paid", price, email : user?.email }
-            axios.post('http://localhost:5000/payment-history', paymentHistory)
+            axios.post('https://doc-house-server-nc9o54us0-apurbomondal85.vercel.app/payment-history', paymentHistory)
                 .then(data => {
                     if (data) {
                         closeModal();

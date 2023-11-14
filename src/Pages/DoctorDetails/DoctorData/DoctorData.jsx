@@ -4,6 +4,7 @@ import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import Overview from '../Overview/Overview';
 import Locations from '../Location/Locations';
 import ReviewTab from '../ReviewTab/ReviewTab';
+import './doctorData.css'
 
 function DoctorData({ doctor }) {
     const list = ["Overview", "Locations", "Reviews", "Business Hours"];
@@ -14,7 +15,7 @@ function DoctorData({ doctor }) {
     };
 
     return (
-        <div className='py-8 px-12 my-12 rounded-md bg-white'>
+        <div className='py-8 px-2 lg:px-12 my-12 rounded-md bg-white'>
             <Tabs selectedIndex={activeTabIndex} onSelect={handleTabSelect}>
                 <TabList>
                     {

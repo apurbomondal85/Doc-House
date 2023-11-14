@@ -3,23 +3,24 @@ import { useContext, useEffect, useState } from "react"
 import { AuthContext } from "../../../../Provider/AuthProvider";
 import AppointmentList from "../AppointmentList/AppointmentList";
 import { Spinner } from "flowbite-react";
-
+import { Helmet } from "react-helmet";
 
 function MyAppointment() {
     const { user, token } = useContext(AuthContext);
     const [selectAppointment, setSelectAppointment] = useState([]);
     const [loader, setLoader] = useState(true);
-
+    
     useEffect(() => {
         if (user?.email && token) {
             axios({
                 method: 'get',
                 headers: { "authorization": `berrer ${token}` },
-                url: `http://localhost:5000/appointmentBook/${user?.email}`
+                url: `https://doc-house-server-nc9o54us0-apurbomondal85.vercel.app/appointmentBook/${user?.email}`
             },
                 { email: user?.email })
                 .then(data => {
-                    setSelectAppointment(data.data)
+                    const remaining = data.data.filter(item => item?.userEmail === user?.email)
+                    setSelectAppointment(remaining)
                     setLoader(false)
                 })
         }
@@ -30,7 +31,8 @@ function MyAppointment() {
     }
 
     return (
-        <div className="pr-16">
+        <div className="lg:pr-16">
+            <Helmet><title>My-Appointment</title></Helmet>
             <AppointmentList appointment={selectAppointment} />
         </div>
     )

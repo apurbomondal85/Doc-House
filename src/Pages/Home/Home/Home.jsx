@@ -5,10 +5,14 @@ import OurDetails from '../OurDetails/OurDetails'
 import PatientsReviews from '../PatientsReviews/PatientsReviews'
 import OurDoctors from '../OurDoctors/OurDoctors'
 import ContactSection from '../Contact/ContactSection'
+import { Helmet } from 'react-helmet'
 
 function Home() {
   return (
-    <div className=''>
+    <div>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
       <Banner></Banner>
       <OurServices></OurServices>
       <OurDetails></OurDetails>

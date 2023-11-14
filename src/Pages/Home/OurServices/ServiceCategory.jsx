@@ -14,7 +14,7 @@ function ServiceCategory() {
     };
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://doc-house-server-nc9o54us0-apurbomondal85.vercel.app/services')
             .then(res => res.json())
             .then(data => {
                 const category = data.filter(item => item.category_name === categoryList[activeTabIndex]);
@@ -38,7 +38,7 @@ function ServiceCategory() {
                                 {
                                     service?.map(item =>
                                         <div key={item._id} className="space-y-4">
-                                            <img className='md:w-[500px]' src={item.categories[0].image_url} alt="category image" />
+                                            <img className='w-full md:w-[500px]' src={item.categories[0].image_url} alt="category image" />
                                             <h1 className='text-3xl font-semibold'>{item.categories[0].name}</h1>
                                             <p>{item.categories[0].description}</p>
                                         </div>

@@ -40,16 +40,16 @@ function AuthProvider({ children }) {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
             if (currentUser) {
-                axios.post("http://localhost:5000/jwt", { email: currentUser.email })
+                axios.post("https://doc-house-server-nc9o54us0-apurbomondal85.vercel.app/jwt", { email: currentUser.email })
                 .then(data => {
                     localStorage.setItem("secret-key", data.data.token);
                     setToken(localStorage.getItem('secret-key') || data.data.token);
+                    setLoader(false)
                 })
             }
             else {
                 localStorage.removeItem("secret-key")
             }
-            setLoader(false)
         });
         return () => unsubscribe();
     }, [])

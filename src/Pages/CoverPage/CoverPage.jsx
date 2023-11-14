@@ -5,7 +5,7 @@ import img2 from '../../assets/images/Group2.png'
 
 function CoverPage({title, subTitle}) {
     return (
-        <div className='h-[500px] bg-[#07332F] relative'>
+        <div className='h-[350px] lg:h-[500px] bg-[#07332F] relative'>
             <div className="container h-full space-y-3 text-white flex flex-col justify-center">
                 <p>Home / {subTitle}</p>
                 <h2 className='text-3xl font-semibold'>{title}</h2>

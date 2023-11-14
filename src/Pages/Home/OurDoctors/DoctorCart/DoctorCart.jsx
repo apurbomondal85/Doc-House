@@ -8,7 +8,7 @@ function DoctorCart({ doctor }) {
     const {_id, name, image, price, graduation, rating, location, available } = doctor;
     return (
         <div className="bg-white h-[550px] relative rounded-lg shadow p-4 overflow-hidden">
-            <img src={image} className='h-[150px] lg:h-[200px] w-full object-cover object-top rounded-md' alt="" />
+            <img src={image} className='h-[200px] w-full object-cover object-top rounded-md' alt="" />
             <div className="py-5 space-y-3">
                 <h5 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">{name}</h5>
                 <p className='text-slate-500'>{graduation}</p>

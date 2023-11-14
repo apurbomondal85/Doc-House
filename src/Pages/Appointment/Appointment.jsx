@@ -4,11 +4,13 @@ import CoverPage from '../CoverPage/CoverPage';
 import AppointmentService from './AppointmentService/AppointmentService';
 import BookService from './BookService/BookService';
 import DateSection from './DateSection/DateSection';
+import { Helmet } from 'react-helmet';
 
 function Appointment() {
     const [value, onChange] = useState(new Date());
     return (
         <div>
+            <Helmet><title>Appointment</title></Helmet>
             <CoverPage title="Appointment" subTitle="Appointment"></CoverPage>
             <div className="bg-chair bg-no-repeat bg-cover bg-center">
                 <div className="bg-[rgba(255,255,255,.9)]">

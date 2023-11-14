@@ -25,7 +25,7 @@ function BookCart({ service, date }) {
         const phone = data.phone;
         const email = data.email;
         if (user) {
-            fetch(`http://localhost:5000/appointmentBook/${user?.email}`, {
+            fetch(`https://doc-house-server-nc9o54us0-apurbomondal85.vercel.app/appointmentBook/${user?.email}`, {
                 method: "POST",
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify({treatment:service?.category_name,  date: dates, time, name, phone, selectedEmail: email, userEmail: user?.email })

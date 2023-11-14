@@ -15,15 +15,17 @@ function ReviewSlider() {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://doc-house-server-nc9o54us0-apurbomondal85.vercel.app/reviews')
             .then(res => res.json())
             .then(data => setReviews(data));
     }, [])
 
+    const screenSize = window.innerWidth;
+
     return (
         <div>
             <Swiper
-                slidesPerView={2}
+                slidesPerView={screenSize < 780 ? 1 : 2}
                 spaceBetween={10}
                 pagination={{
                     clickable: true,
@@ -38,17 +40,17 @@ function ReviewSlider() {
             >
                 {
                     reviews.map(review => <SwiperSlide key={review._id}>
-                        <div className='w-2/3 mx-auto text-center'>
+                        <div className='md:w-2/3 mx-auto text-center'>
                             <img src={review.imageURL} className='w-20 h-20 mx-auto rounded-full' alt="review image" />
-                            <div className="flex flex-col items-center my-4">
+                            <div className="flex flex-col items-center lg:my-4">
                                 <Rating
                                     placeholderRating={review.rating}
-                                    emptySymbol={<FaRegStar className='text-2xl text-yellow-400'></FaRegStar>}
-                                    placeholderSymbol={<FaStar className='text-2xl text-yellow-400'></FaStar>}
-                                    fullSymbol={<FaStar className='text-2xl text-yellow-400'></FaStar>}
+                                    emptySymbol={<FaRegStar className='text-xl lg:text-2xl text-yellow-400'></FaRegStar>}
+                                    placeholderSymbol={<FaStar className='text-xl lg:text-2xl text-yellow-400'></FaStar>}
+                                    fullSymbol={<FaStar className='text-xl lg:text-2xl text-yellow-400'></FaStar>}
                                     readonly
                                 />
-                                <FaQuoteLeft className='text-6xl mt-4'></FaQuoteLeft>
+                                <FaQuoteLeft className='text-3xl lg:text-6xl lg:mt-4'></FaQuoteLeft>
                             </div>
                             <p>{review.comment}</p>
                             <h3 className='text-2xl font-bold mt-3 text-[#CD9003]'>{review.patientName}</h3>

@@ -6,9 +6,9 @@ function Footer() {
     <div className="w-full bg-[#d8d8d8]">
       <div className='container py-16'>
         <footer>
-          <div className="mx-auto w-full max-w-screen-xl pt-20">
-            <div className="md:flex items-center gap-12">
-              <div className="space-y-6 w-[30%]">
+          <div className="mx-auto w-full max-w-screen-xl lg:pt-20">
+            <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-12">
+              <div className="space-y-6 lg:w-[30%]">
                 <div className="flex items-center gap-4">
                   <img src={footerImg} alt="" />
                   <p className='text-3xl font-bold space-x-1'><span className='text-[#F7A582]'>Doc</span>
